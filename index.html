@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+  <title>Reporte del servicio</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+
+
+  <!---<div class="img1"><img src="img/1.jpg" /></div>--->
+
+  <!----<h2 class="titulo">Reporte de falla del servicio de internet.</h2>--->
+  <div class="tarjeta">
+    <h2>¡ Atencion !</h2>
+    <h2 id="tlt">Payresa Technologies ISP</h2>
+    
+    <div class="elemento">
+        <label id="falla">Seleccione la falla :</label>
+        <select class="combo" id="opc">
+        <option value="  Descarga por enegia electrica"> 1. Descarga por enegia electrica</option>
+        <option value="  Mantenimiento a el equipo">     2. Mantenimiento a el equipo</option>
+        <option value="  Reparacion del equipo ">        3. Reparacion del equipo </option>
+        <option value="  Cambio total del equipo (por garantia)">4. Cambio total del equipo (por garantia) </option>
+    </select>
+    </div>
+
+    <div class="elemento">
+    <label id="nombre">Nombre del cliente:</label>
+    <br>
+    <input type="text" id="nom"> <br>
+    </div>
+
+    <div class="elemento">
+    <label id="edad">Edad :</label>
+    <br>
+    <input type="number" id="eda" value=""><br>
+    </div>
+
+    <div class="elemento">
+      <label id="fecha">Fecha de Reporte:</label><br> 
+      <input type="date" 
+      id="fech" value=""><br>
+      </div>
+
+    <div class="elemento">
+
+      <label id="des">Descripcion de la falla: </label><br>
+      <input id="desc" name="name" rows="8" cols="20"></input>
+
+      <br>
+    </div>
+    <!---placeholder=" Direccion:"-->
+    <div class="elemento">
+  <label id="local">Ingrese su Estado</label>
+  <select class="combo2" id="opc2">
+      <option value="no">Seleccione uno...</option>
+      <option value="Aguascalientes">Aguascalientes</option>
+      <option value="Baja California">Baja California</option>
+      <option value="Baja California Sur">Baja California Sur</option>
+      <option value="Campeche">Campeche</option>
+      <option value="Chiapas">Chiapas</option>
+      <option value="Chihuahua">Chihuahua</option>
+      <option value="CDMX">Ciudad de México</option>
+      <option value="Coahuila">Coahuila</option>
+      <option value="Colima">Colima</option>
+      <option value="Durango">Durango</option>
+      <option value="Estado de México">Estado de México</option>
+      <option value="Guanajuato">Guanajuato</option>
+      <option value="Guerrero">Guerrero</option>
+      <option value="Hidalgo">Hidalgo</option>
+      <option value="Jalisco">Jalisco</option>
+      <option value="Michoacán">Michoacán</option>
+      <option value="Morelos">Morelos</option>
+      <option value="Nayarit">Nayarit</option>
+      <option value="Nuevo León">Nuevo León</option>
+      <option value="Oaxaca">Oaxaca</option>
+      <option value="Puebla">Puebla</option>
+      <option value="Querétaro">Querétaro</option>
+      <option value="Quintana Roo">Quintana Roo</option>
+      <option value="San Luis Potosí">San Luis Potosí</option>
+      <option value="Sinaloa">Sinaloa</option>
+      <option value="Sonora">Sonora</option>
+      <option value="Tabasco">Tabasco</option>
+      <option value="Tamaulipas">Tamaulipas</option>
+      <option value="Tlaxcala">Tlaxcala</option>
+      <option value="Veracruz">Veracruz</option>
+      <option value="Yucatán">Yucatán</option>
+      <option value="Zacatecas">Zacatecas</option>
+  </select>
+  </div>
+<br>
+<br>
+<br>
+
+
+  <div class="elemento">
+    <input type="number" id="cp" placeholder=" Codigo postal:" >
+
+   </div>
+
+
+    <div class="element">
+      <br>
+      <label  id="elementoca">Revision tecnica :</label><br>
+      <br>
+    <label    id="onse">Revision de energia electrica</label>
+    </div>
+          <div class="form-check form-check-inline">
+          <input type="radio" name="electricidad" class="form-check-input" id="" value="Si">
+          <label  class="form-check-label">Si</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+            <input type="radio" name="electricidad" class="form-check-input" id="" value="No"
+            checked>
+            <label class="form-check-label">No</label>
+            </div>
+        
+
+<!----SEGUNDA SECCION RADIO BUTTON-->
+<div class="elemento">
+  <br>
+  <label id="one">Revision de cableado</label>
+</div>
+      <div class="form-check form-check-inline">
+      <input type="radio" name="cableado" class="form-check-input" id="" value="Si">
+      <label class="form-check-label">Si</label>
+      </div>
+      <div class="form-check form-check-inline">
+      <input type="radio" name="cableado" class="form-check-input" id="" value="No"
+      checked>
+      <label class="form-check-label">No</label>
+</div>
+
+
+
+
+
+<div class="elemento">
+      <label id="file">Tome una foto de la Reparacion:</label><br>
+      <div class="div_centrado fondo_deg">
+        <div id="cont_webcam" class="div_centrado">
+          <div class="borde">
+            <video id="video" playsinline autoplay></video>
+          </div>
+          <canvas id="canvas" width="400px" height="300px"></canvas>
+
+          
+          <div id="mensaje" class="">
+            <center>
+              <button type="button" id="capturar" onclick="javascript:capturar_foto();">Capturar Foto</button>
+              <button type="button" id="btn_guardar" onclick="javascript:guardar_foto();" style="display:none;">Guardar foto</button>
+            </center>
+          </div>
+        </div>
+      <!----<br>
+      
+        <input type="file" onchange="encodeImage(this)" capture="camera">
+        ---->
+
+      </div>
+
+
+
+
+  <div class="elemento">
+    
+      <a href="javascript:pdfexport();">
+      <input type="submit" value="Enviar "></a>
+      <img class="img1" src="Img\a.jpg" alt="">
+  </div>
+
+  <h2 id="tlt">Diseñado para funcionar en moviles por el momento  NEG0 2</h2>
+
+
+
+
+  <!---</form>-->
+  </div>
+  <script>
+
+    'use strict';
+    document.getElementById('canvas').style.display = 'none';
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+
+    const constraints = {
+      audio: false,
+      video: {
+        width: 1280, height: 720
+      }
+    };
+
+    async function init() {
+      try{
+        const stream = await
+        navigator.mediaDevices.getUserMedia(constraints);
+        handleSuccess(stream);
+      } catch (e){
+        $("#mensaje").html("Debe de seleccionar un dispositivo y permitir el acceso al navegador. Presione F5 o Refresh en el navegador.<br clear='all'><br clear='all'>");
+      }
+    }
+
+    function handleSuccess(stream){
+      window.stream = stream;
+      video.srcObject = stream;
+    }
+
+    init()
+    var context = canvas.getContext('2d');
+
+  function capturar_foto() {
+    context.drawImage(video, 0,0, 300,300);
+    document.getElementById("canvas").style.display = 'block';
+    document.getElementById('video').style.display = 'none';
+    document.getElementById("btn_guardar").style.display = "block"
+  }
+
+  function guardar_foto() {
+    var canvas = document.getElementById('canvas');
+    var  ctx = canvas.getContext('2d');
+    var  dataUrl = canvas.toDataURL();
+    var  formData = new FormData();
+
+    formData.append("captura", dataUrl);
+
+    $.ajax({
+      url: "guardarimg.php",
+      type: "POST",
+      data: formData,
+      cache: false,
+      contentType: false,
+      processData: false,
+      success: function(resp){
+        var msj=JSON.parse(resp);
+        if (msj.error == 0){
+          $("#mensaje").html(msj.mensaje);
+        } else {
+          $("#mensaje").html(msj.mensaje);
+        }
+      }
+    });
+  }
+    </script>
+  <!--aqui terina tarjeton-->
+  <script type="text/javascript" src="scri.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.js"></script>
+</body>
+
+</html>
